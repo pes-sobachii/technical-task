@@ -135,8 +135,8 @@ h1 {
 }
 
 h1 > span {
-    border-left: 2px solid #FFD600;
-    background: linear-gradient(87deg, rgba(255, 214, 0, 0.1) 0%, rgba(250, 224, 39, 0) 92%);
+    border-left: 2px solid #E46F47;
+    background: linear-gradient(87deg, rgba(228, 111, 71, 0.1) 0%, rgba(228, 111, 71, 0) 92%);
     animation: caretAnim 1.3s infinite ease-in-out;
 }
 
@@ -209,8 +209,8 @@ button {
     background: #FFD600;
     filter: blur(125.824px);
     animation: circleAnim 5s infinite ease-in-out;
-    right: -200px;
-    bottom: -200px;
+    right: -210px;
+    bottom: -320px;
 }
 
 .menu {
@@ -292,7 +292,7 @@ button {
 
 @keyframes caretAnim {
     0% {
-        border-color: yellow;
+        border-color: #E46F47;
     }
 
     50% {
