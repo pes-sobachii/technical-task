@@ -116,10 +116,15 @@ h1 {
     max-width: 90%;
 }
 
-
 h1 > span {
     border-left: 4px solid yellow;
     background: linear-gradient(87deg, rgba(255, 255, 0, 0.1) 0%, rgba(250, 224, 39, 0) 92%);
+    animation: caretAnim 1.3s infinite ease-in-out;
+}
+
+h1 > span:before {
+    content: '';
+    display: inline-block;
 }
 
 h3 {
@@ -135,7 +140,7 @@ h3 {
 
 h3:after {
     display: inline-block;
-    animation: dotty steps(1, end) 1s infinite;
+    animation: dotty steps(1, end) 3s infinite;
     content: '';
 }
 
@@ -236,17 +241,27 @@ button {
     }
 }
 
-@keyframes circleAnim {
+@keyframes caretAnim {
     0% {
-        opacity: 0.25;
+        border-color: yellow;
     }
 
     50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes circleAnim {
+    0% {
         opacity: 0.5;
     }
 
+    50% {
+        opacity: 1;
+    }
+
     100% {
-        opacity: 0.25;
+        opacity: 0.5;
     }
 }
 
