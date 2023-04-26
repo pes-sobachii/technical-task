@@ -290,6 +290,13 @@ button {
 
 }
 
+@media (max-width: 500px) {
+    h3{
+        font-size: 12px;
+    }
+
+}
+
 @keyframes caretAnim {
     0% {
         border-color: #E46F47;
