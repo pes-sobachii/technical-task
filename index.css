@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'PP Formula';
-    src: url("fonts/PPFormula-NarrowRegular.otf") format("opentype");
+    src: url("./fonts/PPFormula-NarrowRegular.otf") format("opentype");
 }
 
 * {
