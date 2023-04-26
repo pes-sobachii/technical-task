@@ -52,8 +52,12 @@ a, button {
     transition: all 0.3s ease;
 }
 
-button:hover, a:hover {
-    filter: brightness(80%);
+button:hover {
+    background: #ffd600;
+}
+
+a:hover {
+    color: #ffd600;
 }
 
 button:focus, button:active {
@@ -152,10 +156,13 @@ h3 {
 }
 
 
-h3:after {
+h3 span {
+    position: relative;
     display: inline-block;
-    animation: dotty steps(1, end) 3s infinite;
-    content: '';
+    padding: 0;
+    margin: 0;
+    animation: flip 4s infinite;
+    animation-delay: calc(.3s * var(--i))
 }
 
 .contact {
@@ -179,7 +186,6 @@ button {
     line-height: 20px;
     color: #181819;
     background: white;
-    border: 1px solid #FFFFFF;
     border-radius: 6px;
     padding: 10px 61.5px;
     position: relative;
@@ -207,7 +213,7 @@ button {
     bottom: -200px;
 }
 
-.menu{
+.menu {
     width: 100%;
     display: none;
 }
@@ -218,11 +224,11 @@ button {
     padding: 30px 10px;
 }
 
-.menu nav ul li{
+.menu nav ul li {
     margin-bottom: 30px;
 }
 
-.visible{
+.visible {
     display: block;
 }
 
@@ -230,12 +236,12 @@ button {
     display: none;
 }
 
-.burger-button{
+.burger-button {
     display: none;
     padding: 10px 20px;
 }
 
-#elem{
+#elem {
     position: relative;
     background: transparent;
 }
@@ -251,12 +257,12 @@ button {
     background: #181819;
 }
 
-@media (max-width: 900px){
-    .burger-button{
+@media (max-width: 900px) {
+    .burger-button {
         display: block;
     }
 
-    header nav{
+    header nav {
         display: none;
     }
 
@@ -264,7 +270,7 @@ button {
         font-size: 50px;
     }
 
-    .contact{
+    .contact {
         flex-direction: column;
         align-items: center;
         gap: 30px;
@@ -308,20 +314,8 @@ button {
     }
 }
 
-@keyframes dotty {
-    0% {
-        content: '';
-    }
-    25% {
-        content: '.';
-    }
-    50% {
-        content: '..';
-    }
-    75% {
-        content: '...';
-    }
-    100% {
-        content: '';
+@keyframes flip {
+    0%, 80% {
+        transform: rotateY(360deg)
     }
 }
