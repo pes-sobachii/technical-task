@@ -85,7 +85,7 @@ html, body {
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding-bottom: 40px;
+    /*padding-bottom: 40px;*/
 }
 
 .container {
@@ -200,11 +200,10 @@ button {
 }
 
 footer{
-    padding-top: 20px;
+    padding: 20px 0;
     border-top: 1px solid rgba(159, 158, 158, 0.24);
     width: 100%;
     text-align: center;
-    flex: 0 0 1%;
 }
 
 footer h4{
@@ -214,7 +213,7 @@ footer h4{
 }
 
 footer h4:nth-child(1){
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 footer h4:nth-child(2){
@@ -314,20 +313,30 @@ footer h4:nth-child(2){
         font-size: 12px;
     }
 
+    .contact{
+        padding: 40px 0;
+        gap: 50px;
+    }
+
     footer{
         margin-top: 25px;
 
     }
     footer h4 {
         color: #d2d2d2;
+        font-size: 11px;
     }
 
     footer h4:nth-child(1){
         margin-bottom: 15px;
     }
 
+    footer h4:nth-child(1) a{
+        text-decoration: underline;
+    }
+
     footer h4:nth-child(2){
-        opacity: 1;
+        opacity: .9;
     }
 
 }
