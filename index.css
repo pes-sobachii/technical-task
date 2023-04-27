@@ -85,6 +85,7 @@ html, body {
     align-items: center;
     position: relative;
     overflow: hidden;
+    z-index: 2;
     /*padding-bottom: 40px;*/
 }
 
@@ -146,6 +147,11 @@ h1 > span:before {
     display: inline-block;
 }
 
+
+h1 br:first-child{
+    display: none;
+}
+
 h3 {
     font-size: 14px;
     line-height: 16px;
@@ -167,7 +173,6 @@ h3 span {
 }
 
 .contact {
-    border-top: 1px solid rgba(159, 158, 158, 0.24);
     display: flex;
     justify-content: space-between;
     padding-top: 32px;
@@ -200,35 +205,38 @@ button {
 }
 
 footer{
-    padding: 20px 0;
-    border-top: 1px solid rgba(159, 158, 158, 0.24);
     width: 100%;
-    text-align: center;
+}
+
+.credentials{
+    border-top: 1px solid rgba(159, 158, 158, 0.24);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 0;
+    font-size: 14px;
+}
+
+.credentials a{
+    color: #ED6A3D;
 }
 
 footer h4{
-    color: gray;
+    color: #9F9E9E;
     position: relative;
     z-index: 2;
-}
-
-footer h4:nth-child(1){
-    margin-bottom: 20px;
-}
-
-footer h4:nth-child(2){
-    opacity: .5;
 }
 
 .circle {
     position: absolute;
     width: 409px;
     height: 406px;
-    background: #FFD600;
-    filter: blur(125.824px);
+    background: linear-gradient(236.71deg, #FFD600 32.73%, #FF4B00 67.46%);
+    filter: blur(145.824px);
     animation: circleAnim 5s infinite ease-in-out;
     right: -210px;
-    bottom: -320px;
+    bottom: 120px;
+    /*z-index: -2;*/
 }
 
 .menu {
@@ -275,7 +283,7 @@ footer h4:nth-child(2){
     background: #181819;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 932px) {
     .burger-button {
         display: block;
     }
@@ -285,15 +293,22 @@ footer h4:nth-child(2){
     }
 
     h1 {
-        font-size: 50px;
+        font-size: 75px;
+        margin-bottom: 40px;
+    }
+
+
+    h1 br:first-child{
+        display: inline;
+    }
+
+    h2{
+        font-size: 17px;
     }
 
     .contact {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
+        padding-bottom: 20px;
     }
-
 
     #elem:after {
         content: '';
@@ -308,35 +323,63 @@ footer h4:nth-child(2){
 
 }
 
+@media (max-width: 750px) {
+
+    .contact{
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .credentials{
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+}
+
+
 @media (max-width: 500px) {
-    h3{
-        font-size: 12px;
+
+    .container {
+        padding: 0 16px;
+    }
+
+    h1 {
+        font-size: 46px;
+        margin-bottom: 12px;
+    }
+
+    h2{
+        font-size: 16px;
+    }
+
+    h2 br{
+        display: none;
+    }
+
+
+    .circle{
+        animation: none;
+        opacity: .4;
     }
 
     .contact{
-        padding: 40px 0;
-        gap: 50px;
+        padding: 8px 0;
+    }
+
+    .contact a, .contact button{
+        width: 100%;
+    }
+
+    .circle{
+        bottom: 200px;
     }
 
     footer{
         margin-top: 25px;
-
-    }
-    footer h4 {
-        color: #d2d2d2;
-        font-size: 11px;
-    }
-
-    footer h4:nth-child(1){
-        margin-bottom: 15px;
-    }
-
-    footer h4:nth-child(1) a{
-        text-decoration: underline;
-    }
-
-    footer h4:nth-child(2){
-        opacity: .9;
+        padding-bottom: 16px;
     }
 
 }
