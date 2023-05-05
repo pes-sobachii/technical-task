@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 @font-face {
     font-family: 'PP Formula';
@@ -281,6 +282,85 @@ footer h4{
     left: -4px;
     position: absolute;
     background: #181819;
+}
+
+.credentials__top{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 46px;
+    margin-top: 87px;
+    border-top: 1px solid rgba(159, 158, 158, 0.24);
+}
+
+.credentials__top div:first-child{
+    display: flex;
+    flex-direction: column;
+}
+
+.credentials__top:first-child h5{
+    letter-spacing: 0.2px;
+    font-size: 14px;
+    color: #9F9E9E;
+}
+
+.credentials__top:first-child h2{
+    min-height: 150px;
+    margin-top: 49px;
+    font-family: 'PP Formula', sans-serif;
+    background: linear-gradient(118.26deg, #FFFFFF 32.52%, rgba(212, 209, 205, 0) 149.98%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 64px;
+    line-height: 110%;
+    text-transform: uppercase;
+}
+
+.contacts{
+    display: flex;
+    gap: 88px;
+    align-self: flex-end;
+    padding-bottom: 60px;
+}
+
+.contacts h4{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #9F9E9E;
+
+}
+
+.contacts p{
+    font-family: 'PP Formula', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    margin-top: 16px;
+    text-transform: uppercase;
+    max-width: 226px;
+}
+
+.contacts div:last-child p{
+    color: #ED6A3D;
+}
+
+.credentials__bottom{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+}
+
+.credentials__bottom h4{
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    color: #9F9E9E;
+    align-self: flex-end;
+    padding-bottom: 15px;
+}
+
+.credentials__bottom img{
+    max-width: 202px;
 }
 
 @media (max-width: 932px) {
