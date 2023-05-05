@@ -149,7 +149,7 @@ h1 > span:before {
 }
 
 
-h1 br:first-child{
+h1 br:first-child {
     display: none;
 }
 
@@ -205,11 +205,11 @@ button {
     justify-content: center;
 }
 
-footer{
+footer {
     width: 100%;
 }
 
-.credentials{
+.credentials {
     border-top: 1px solid rgba(159, 158, 158, 0.24);
     display: flex;
     justify-content: space-between;
@@ -218,11 +218,11 @@ footer{
     font-size: 14px;
 }
 
-.credentials a{
+.credentials a {
     color: #ED6A3D;
 }
 
-footer h4{
+footer h4 {
     color: #9F9E9E;
     position: relative;
     z-index: 2;
@@ -284,7 +284,7 @@ footer h4{
     background: #181819;
 }
 
-.credentials__top{
+.credentials__top {
     display: flex;
     justify-content: space-between;
     padding-top: 46px;
@@ -292,18 +292,26 @@ footer h4{
     border-top: 1px solid rgba(159, 158, 158, 0.24);
 }
 
-.credentials__top div:first-child{
+.credentials__top div:first-child {
     display: flex;
     flex-direction: column;
 }
 
-.credentials__top:first-child h5{
+.credentials__top:first-child h5 {
     letter-spacing: 0.2px;
     font-size: 14px;
     color: #9F9E9E;
 }
 
-.credentials__top:first-child h2{
+.mobile {
+    display: none;
+}
+
+.wide {
+    display: block;
+}
+
+.credentials__top:first-child h2 {
     min-height: 150px;
     margin-top: 49px;
     font-family: 'PP Formula', sans-serif;
@@ -316,21 +324,21 @@ footer h4{
     text-transform: uppercase;
 }
 
-.contacts{
+.contacts {
     display: flex;
     gap: 88px;
     align-self: flex-end;
     padding-bottom: 60px;
 }
 
-.contacts h4{
+.contacts h4 {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     color: #9F9E9E;
 
 }
 
-.contacts p{
+.contacts p {
     font-family: 'PP Formula', sans-serif;
     font-weight: 600;
     font-size: 20px;
@@ -340,17 +348,22 @@ footer h4{
     max-width: 226px;
 }
 
-.contacts div:last-child p{
+.contacts p img {
+    max-width: 25px;
+    transform: translateY(15%);
+}
+
+.contacts div:last-child p {
     color: #ED6A3D;
 }
 
-.credentials__bottom{
+.credentials__bottom {
     display: flex;
     justify-content: space-between;
     padding-bottom: 25px;
 }
 
-.credentials__bottom h4{
+.credentials__bottom h4 {
     font-style: normal;
     font-size: 14px;
     letter-spacing: 0.2px;
@@ -359,8 +372,16 @@ footer h4{
     padding-bottom: 15px;
 }
 
-.credentials__bottom img{
-    max-width: 202px;
+.credentials__bottom img {
+    max-width: 120px;
+}
+
+@media (max-width: 1100px) {
+    .credentials__top {
+        flex-direction: column;
+        align-items: center
+    }
+
 }
 
 @media (max-width: 932px) {
@@ -378,11 +399,11 @@ footer h4{
     }
 
 
-    h1 br:first-child{
+    h1 br:first-child {
         display: inline;
     }
 
-    h2{
+    h2 {
         font-size: 17px;
     }
 
@@ -394,26 +415,52 @@ footer h4{
         height: 12px;
     }
 
+    .credentials__top {
+        border: none;
+    }
+
+    .contacts{
+        flex-direction: column;
+        gap: 50px;
+        margin: 0 auto;
+    }
+
+    .contacts div{
+        align-self: start;
+    }
+
 }
 
 @media (max-width: 750px) {
 
-    .contact{
+    .contact {
         flex-direction: column;
         align-items: center;
         gap: 24px;
     }
 
-    .credentials{
-        flex-direction: column;
-        gap: 16px;
-        align-items: flex-start;
+
+    .credentials__bottom {
+        gap: 30px;
+        flex-direction: column-reverse;
+        padding-bottom: 10px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .credentials__bottom h4 {
+        font-size: 12px;
+        align-self: center;
     }
 
 }
 
 
 @media (max-width: 500px) {
+
+    main {
+        min-height: 100vh;
+    }
 
     .container {
         padding: 0 16px;
@@ -424,11 +471,11 @@ footer h4{
         margin-bottom: 12px;
     }
 
-    h2{
+    h2 {
         font-size: 16px;
     }
 
-    h2 br{
+    h2 br {
         display: none;
     }
 
@@ -437,26 +484,67 @@ footer h4{
         left: -4px;
     }
 
-    .circle{
+    .circle {
         animation: none;
         opacity: .4;
     }
 
-    .contact{
+    .contact {
         padding: 8px 0;
     }
 
-    .contact a, .contact button{
+    .contact a, .contact button {
         width: 100%;
     }
 
-    .circle{
+    .circle {
         bottom: 200px;
     }
 
-    footer{
+    footer {
         margin-top: 25px;
         padding-bottom: 16px;
+    }
+
+
+    .credentials__top {
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .credentials__top div:first-child {
+        width: 90%;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .wide {
+        display: none;
+    }
+
+    .contacts {
+        gap: 40px;
+        padding-bottom: 60px;
+        width: 90%;
+    }
+
+    .contacts p {
+        max-width: unset;
+    }
+
+    .contacts p.ua {
+        max-width: 226px;
+        font-weight: 400;
+    }
+
+    .contacts p.ua img {
+        transform: translateY(5%);
+    }
+
+    .credentials__bottom {
+        gap: 25px;
     }
 
 }
