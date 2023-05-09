@@ -515,7 +515,12 @@ footer h4 {
 
     .credentials__top:first-child {
         align-self: flex-end;
-        min-height: 120px;
+    }
+
+    .credentials__top:first-child h2{
+        font-size: 40px;
+        padding-bottom: -140px;
+        min-height: 100px;
     }
 
     .mobile {
