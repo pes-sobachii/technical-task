@@ -372,6 +372,12 @@ footer h4 {
     padding-bottom: 15px;
 }
 
+.footer__icons{
+    display: flex;
+    align-items: center;
+    
+}
+
 .credentials__bottom img {
     max-width: 120px;
 }
